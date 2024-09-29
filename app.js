@@ -7,6 +7,7 @@ const app = express();
 
 // import uses router
 const usersRouter = require('./controller/users');
+const loginRouter = require('./controller/login');
 
 
 // use the cors middleware
@@ -16,6 +17,7 @@ app.use(express.json());
 
 //define all endpoints here
 app.use('/api/users',usersRouter);
+app.use('/api/login',loginRouter)
 
 
 // export the app
